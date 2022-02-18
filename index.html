@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap goes here -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- bootstrap's javascript solution -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- basic style in here -->
+    <style>
+
+    </style>
+    <!-- external style -->
+    <link rel="stylesheet" href="index_style.css">
+    <title>Kezdőlap</title>
+</head>
+<body>
+    <!-- header with search bar here -->
+    <header class="p-3 mb-3 border-bottom">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+    
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li><a href="#" class="nav-link px-2 link-secondary">Overview</a></li>
+              <li><a href="#" class="nav-link px-2 link-dark">Keret Bontása</a></li>
+              <li><a href="#" class="nav-link px-2 link-dark">Keret History</a></li>
+              <li><a href="#" class="nav-link px-2 link-dark">Dokumentáció</a></li>
+            </ul>
+    
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+              <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+            </form>
+    
+            <div class="dropdown text-end">
+              <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+              </a>
+              <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+                <li><a class="dropdown-item" href="#">Probléma jelentése</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Kijelentkezés</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </header>
+    <!-- notification center line -->
+    <div class="d-flex flex-row justify-content-between align-items-start p-2 m-2">
+      <!-- notification  -->
+      <div class="p-2 bd-highlight">(értesítés lesz majd)</div>
+      <!-- active fns notification -->
+      <div class="p-2 bd-highlight">
+        <div class="border-start border-danger border-3 bg-light p-2">no active fns right now!</div>
+      </div>
+      <!-- line status indicator -->
+      <div class="p-2 bd-highlight d-inline-flex">
+          <div class="p-1 text-lead">line 8 <div class="blob" id="line8"> </div> </div>
+          <div class="p-1 text-lead">line 12 <div class="blob" id="line12"> </div> </div>
+      </div>
+    </div>
+    <!-- quick access -->
+    <h2 class="display-4 m-2 p-2">Gyors elérés</h2>
+    <h4 class="display-5 m-2 p-2 text-secondary">A legördülő menükből kiválaszthatja a kívánt akciót</h4>
+    <div class="container">
+      <div class="row align-self-center mt-4 p-2">
+        
+        <!-- first card -->
+        <div class="col-md-4 ">
+          <div class="h-90 p-5 bg-light border border-2 rounded-3 shadow-lg">
+            <h2>Új keret készítése</h2>
+            <p class="text-lead">Új keret készítése nulláról. Nem kell megadni az alkatrész mennyiségeket, automatikusan elveszi a supermaket-ből.</p>
+            <button class="btn btn-outline-secondary" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">kezdés</button>
+          </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Új keret készítése</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Understood</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- second card -->
+        <div class="col-md-4">
+          <div class="h-90 p-5 bg-light border border-2 rounded-3 shadow-lg">
+            <h2>Keret javítása</h2>
+            <p>A keretjavítása funkció használatával megadhatja a cserélni kívánt alkatrészeket és mennyiségüket.</p>
+            <button class="btn btn-outline-secondary" type="button">kezdés</button>
+          </div>
+        </div>
+        <!-- third card -->
+        <div class="col-md-4 ">
+          <div class="h-90 p-5 bg-light border border-2 rounded-3 shadow-lg">
+            <h2>Keret beállítása</h2>
+            <p>A keret beállítása menü használatával tud regisztrálni egy beálított keretet a 8-as vagy a 12-es sorra. </p>
+            <button class="btn btn-outline-secondary" type="button">kezdés</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  
+    <!-- quick overview -->
+    <h2 class="display-4 m-2 p-2">Quick Overview</h2> 
+    <div class="container">
+      <div class="row align-self-center mt-4 p-2">
+        <!-- table of last 5 action  -->
+        <div class="col-md-6">
+          <h3 class="text-secondary">Az utolsó 5 javított keret</h3>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Keret ID</th>
+                <th scope="col">Hiba</th>
+                <th scope="col">Javító</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>N_1254</td>
+                <td>Tekeredett</td>
+                <td>Horváth Giovanni</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>N_2353</td>
+                <td>Törött</td>
+                <td>Horváth Giovanni</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>N_2824</td>
+                <td>Laza</td>
+                <td>Asztalos Tamás</td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>N_2346</td>
+                <td>Nem párhuzamos</td>
+                <td>Asztalos Tamás</td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>N_1213</td>
+                <td>Szoros</td>
+                <td>Biró Dávid</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- low inventory -->
+        <div class="col md-6">
+          <h3 class="text-secondary">Alacsony készlet</h3>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Alkatrész Megnevezés</th>
+                <th scope="col">készlet</th>
+                <th scope="col">Krib ID</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Oldalfal lamella</td>
+                <td>6</td>
+                <td>IE-301-b1-12</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>M6X20 Csavar</td>
+                <td>30</td>
+                <td>IE-301-b1-12</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Tartó profil</td>
+                <td>3</td>
+                <td>IE-301-b1-12</td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>Fogaskerék</td>
+                <td>15</td>
+                <td>IE-301-b1-12</td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>Fogaskerék összekötő</td>
+                <td>11</td>
+                <td>IE-301-b1-12</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- most common failures -->
+        <div class="row align-self-center mt-4 p-2">
+          <div class="col md-6">
+            <h3 class="text-secondary">Leggyakrabban előfordulóhibák</h3>
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">KeretID</th>
+                  <th scope="col">Hiba</th>
+                  <th scope="col">előforduás</th>
+                  <th scope="col">sor</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>N_1254</td>
+                  <td>Tekeredett</td>
+                  <td>12</td>
+                  <td>12.sor</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>N_2353</td>
+                  <td>Törött</td>
+                  <td>23</td>
+                  <td>6.sor</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>N_2824</td>
+                  <td>laza</td>
+                  <td>45</td>
+                  <td>8.sor</td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td>N_2346</td>
+                  <td>Nem párhuzamos</td>
+                  <td>10</td>
+                  <td>1.sor</td>
+                </tr>
+                <tr>
+                  <th scope="row">5</th>
+                  <td>N_1213</td>
+                  <td>Szoros</td>
+                  <td>33</td>
+                  <td>8.sor</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!--  -->
+          <div class="col md-6"> something to monitor here
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- timeline -->
+
+   <!-- footer -->
+   <div class="container">
+    <footer class="d-flex flex-wrap text-center align-items-center py-3 my-4 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+        <span class="text-muted">&copy; 2022 Aptiv Services Hungary</span>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
