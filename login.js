@@ -9,7 +9,7 @@ button.addEventListener("click", (e) =>{
     if(username == "user" && password == "user"){
         location.href = "vizual-v2.html";
     } else if(username == "keret" && password == "keret"){
-        location.href = "index.html";
+        location.href = "keret.html";
     }
      else if(username == "krib" && password == "krib"){
     location.href = "krib.html";
