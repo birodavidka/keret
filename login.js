@@ -7,9 +7,9 @@ button.addEventListener("click", (e) =>{
     const password = form.password.value;
     
     if(username == "user" && password == "user"){
-        location.href = "vizual-v2.html";
+        location.href = "keret/vizual-v2.html";
     } else if(username == "keret" && password == "keret"){
-        location.href = "index.html";
+        location.href = "keret/keret.html";
     }else {
         alert("username or pass not correct")
     }
