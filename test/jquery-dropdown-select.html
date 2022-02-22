@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+</head>
+<body>
+    <select class="drop-down">
+        <option value="">--Select--</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select><br>
+      <select class="drop-down">
+        <option value="">--Select--</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select><br>
+      <select class="drop-down">
+        <option value="">--Select--</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select><br>
+      <select class="drop-down">
+        <option value="">--Select--</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+var selects = $('.drop-down');
+selects.not(':eq(0)').prop('disabled', true); // disable all but first drop down
+
+selects.on('change', function() {
+  var select = $(this),
+      currentIndex = selects.index(select),
+      nextIndex = currentIndex + 1;
+  
+//   only do this if it is not last select
+  if (currentIndex != selects.length - 1) { 
+    selects.slice(nextIndex)        // get all selects after current one
+           .val('')                 // reset value
+           .prop('disabled', true); // disable 
+    
+    selects.eq(nextIndex).prop('disabled', select.val() === ''); // disable / enable next select based on val
+  }
+  
+})
+</script>
+</body>
+</html>
