@@ -1,0 +1,1 @@
+window.localStorage.setItem(form.username.value, form.password.value);
